@@ -96,8 +96,10 @@ public class StringInterpolationService : IStringInterpolationService
 
     public string Number11()
     {
-        throw new NotImplementedException();
+        var year = _date.Now.ToString("yyyy");
+        var output = $"{byte.MaxValue:2019}";
+
+        return output;
     }
 
-    //2.2019.01.22
 }
