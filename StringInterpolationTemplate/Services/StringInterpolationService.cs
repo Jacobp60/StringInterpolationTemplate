@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection.Metadata.Ecma335;
 using Microsoft.Extensions.Logging;
 using StringInterpolationTemplate.Utils;
 
@@ -28,47 +29,69 @@ public class StringInterpolationService : IStringInterpolationService
 
     public string Number02()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString("yyyy.mm.dd");
+        
+
+        return date;
     }
 
     public string Number03()
     {
-        throw new NotImplementedException();
+        var date = $"Day {_date.Now:dd} of {_date.Now:MMMM, yyyy}";
+
+        return date;
     }
 
     public string Number04()
     {
-        throw new NotImplementedException();
+        var date =$"Year: {_date.Now:yyyy}, Month: {_date.Now:MM}, Day: {_date.Now:dd}";
+
+        return date;
     }
 
     public string Number05()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString("dddd");
+        var answer = $"{date,10}";
+
+        return answer;
     }
 
     public string Number06()
     {
-        throw new NotImplementedException();
+
+        var answer = $"{_date.Now,10:t}{_date.Now,10:dddd}";
+
+        return answer;
     }
 
     public string Number07()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString("'h:'hh, 'm:'mm, 's:'ss");
+
+        return date;
     }
 
     public string Number08()
     {
-        throw new NotImplementedException();
+        var date = $"{_date.Now:yyyy.MM.dd.hh.mm.ss}";
+
+        return date;
     }
 
     public string Number09()
     {
-        throw new NotImplementedException();
+        var pi1 = Math.PI;
+        var output = $"{pi1:C}";
+
+        return output;
     }
 
     public string Number10()
     {
-        throw new NotImplementedException();
+        var pi1 = Math.PI;
+        var output = $"{pi1,10:N3}";
+        return output;
     }
 
     public string Number11()
